@@ -48,3 +48,30 @@ void printMatrix(const double mat[][MAX_COL], const int maxRow)
 		}
 	}
 }
+
+/**
+* The <code>sumOfRow</code> function computes the sum of a specific row
+* @param The matrix to select row from
+* @param row The number of the row within the matrix
+* @param maxRow The number of rows that the matrix contains
+* @return The sum of the values of the row
+*/
+double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
+{
+	assert(maxRow > 0);
+
+
+}
+
+/**
+* The <code>sumOfCol</code> function computes the sum of a specific column
+* @param The matrix to select column from
+* @param column The number of the column within the matrix
+* @param maxRow The number of rows that the matrix contains
+* @return The sum of the values of the column
+*/
+double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
+{
+	assert(maxRow > 0);
+	
+}
