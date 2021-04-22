@@ -76,8 +76,14 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
 * @param maxRow The number of rows that the matrix contains
 * @return The sum of the values of the column
 */
-/*double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
+double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 {
 	assert(maxRow > 0);
 	
-}*/
+	double sum = 0;
+	for (int i = 0; i < maxRow; i++) {
+		sum += mat[i][column];
+	}
+
+	return sum;
+}

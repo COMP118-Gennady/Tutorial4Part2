@@ -35,7 +35,9 @@ int main()
             cin >> row;
             cout << sumOfRow(matrix, row, MAX_ROW) << endl;
             break;
-        case 2: //Sum of Column
+        case 2: cout << "Enter the column number you want to sum: ";
+            cin >> col;
+            cout << sumOfCol(matrix, col, MAX_ROW) << endl;
             break;
         case 3: fillWithRandom(matrix, MAX_ROW);
             break;
