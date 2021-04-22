@@ -43,11 +43,17 @@ int main()
             break;
         case 4: printMatrix(matrix, MAX_ROW);
             break;
-        case 5:
+        case 5: cout << "Enter the row number (R#) you want to average: ";
+            cin >> row;
+            cout << avgOfRow(matrix, row, MAX_ROW) << endl;
             break;
-        case 6:
+        case 6: cout << "Enter the column number you want to average: ";
+            cin >> col;
+            cout << avgOfCol(matrix, col, MAX_ROW) << endl;
             break;
-        case 7:
+        case 7: cout << "Enter row and column numbers, as coordinates of the value you want to find: ";
+            cin >> row >> col;
+            cout << findElement(matrix, row, col, MAX_ROW) << endl;
             break;
         case 8: //Exit
             break;
@@ -70,9 +76,9 @@ int menu()
     cout << "2) Sum of Column" << endl;
     cout << "3) Fill Random" << endl;
     cout << "4) Print" << endl;
-    cout << "5) option 1" << endl;
-    cout << "6) option 2" << endl;
-    cout << "7) option 3" << endl;
+    cout << "5) Average of Row" << endl;
+    cout << "6) Average of Column" << endl;
+    cout << "7) Find an Element" << endl;
     cout << "8) Exit" << endl;
     cout << "Enter your option: ";
     cin >> choice;

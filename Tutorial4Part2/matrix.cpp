@@ -87,3 +87,40 @@ double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 
 	return sum;
 }
+
+/**
+* The <code>avgOfRow</code> function computes the average of a specific row
+* @param The matrix to select row from
+* @param row The number of the row within the matrix
+* @param maxRow Divides the sum function to compute average
+* @return The average of the values of the row
+*/
+double avgOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
+{
+	return sumOfRow(mat, row, maxRow) / MAX_COL;
+}
+
+/**
+* The <code>avgOfCol</code> function computes the average of a specific column
+* @param The matrix to select column from
+* @param column The number of the column within the matrix
+* @param maxRow Divides the sum function to compute average
+* @return The sum of the values of the column
+*/
+double avgOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
+{
+	return sumOfCol(mat, column, maxRow) / maxRow;
+}
+
+/**
+* The <code>findElement</code> function locates the value of the row and column provided
+* @param The matrix to locate the value from
+* @param row The number of the row within the matrix
+* @param column The number of the column within the matrix
+* @param maxRow The number of rows that the matrix contains
+* @return The value of the element in the matrix
+*/
+double findElement(const double mat[][MAX_COL], const int row, const int column, const int maxRow)
+{
+	return mat[row][column];
+}
