@@ -28,7 +28,7 @@ void fillWithRandom(double mat[][MAX_COL], const int maxRow)
 
 	for (int i = 0; i < maxRow; i++) {
 		for (int j = 0; j < MAX_COL; j++) {
-			mat[i][j] = rand() % static_cast<int>(MAX_VALUE); //todo need to complete with min value
+			mat[i][j] = rand() % (static_cast<int>(MAX_VALUE) - static_cast<int>(MIN_VALUE)) + static_cast<int>(MIN_VALUE);
 		}
 	}
 }
@@ -60,6 +60,12 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
 {
 	assert(maxRow > 0);
 
+	double sum = 0;
+	for (int i = 0; i < MAX_COL; i++) {
+		sum += mat[row][i];
+	}
+
+	return sum;
 
 }
 
@@ -70,8 +76,8 @@ double sumOfRow(const double mat[][MAX_COL], const int row, const int maxRow)
 * @param maxRow The number of rows that the matrix contains
 * @return The sum of the values of the column
 */
-double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
+/*double sumOfCol(const double mat[][MAX_COL], const int column, const int maxRow)
 {
 	assert(maxRow > 0);
 	
-}
+}*/

@@ -23,6 +23,7 @@ const int MAX_ROW = 5;
 int main()
 {
     int choice;
+    int row, col;
 
     double matrix[][MAX_COL] = {0};
 
@@ -30,7 +31,9 @@ int main()
         choice = menu();
 
         switch (choice) {
-        case 1: //Sum of Row
+        case 1: cout << "Enter the row number (R#) you want to sum: ";
+            cin >> row;
+            cout << sumOfRow(matrix, row, MAX_ROW) << endl;
             break;
         case 2: //Sum of Column
             break;
@@ -51,7 +54,7 @@ int main()
         }
 
     } while (choice != 8);
-    std::cout << "Hello World!\n";
+    std::cout << "Goodbye!\n";
 }
 
 /**
