@@ -43,17 +43,18 @@ int main()
             break;
         case 4: printMatrix(matrix, MAX_ROW);
             break;
-        case 5: cout << "Enter the row number (R#) you want to average: ";
-            cin >> row;
-            cout << avgOfRow(matrix, row, MAX_ROW) << endl;
+        case 5:
+            if (!makeIdentityMatrix(mat, MAX_ROW))
+                cerr << "\nNot a square matrix, cannot apply function";
             break;
-        case 6: cout << "Enter the column number you want to average: ";
-            cin >> col;
-            cout << avgOfCol(matrix, col, MAX_ROW) << endl;
+        case 6:
+            if (isIdentityMatrix(mat, MAX_ROW))
+                cout << "\nMatrix is an identity matrix";
+            else
+                cout << "\nMatrix is NOT an identity matrix";
             break;
-        case 7: cout << "Enter row and column numbers, as coordinates of the value you want to find: ";
-            cin >> row >> col;
-            cout << findElement(matrix, row, col, MAX_ROW) << endl;
+        case 7:
+            cout << "\nSum of diagonal is: " << sumOfDiagonal(mat, MAX_ROW);
             break;
         case 8: //Exit
             break;
