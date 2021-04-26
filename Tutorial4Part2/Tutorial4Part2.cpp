@@ -44,17 +44,17 @@ int main()
         case 4: printMatrix(matrix, MAX_ROW);
             break;
         case 5:
-            if (!makeIdentityMatrix(mat, MAX_ROW))
+            if (!makeIdentityMatrix(matrix, MAX_ROW))
                 cerr << "\nNot a square matrix, cannot apply function";
             break;
         case 6:
-            if (isIdentityMatrix(mat, MAX_ROW))
+            if (isIdentityMatrix(matrix, MAX_ROW))
                 cout << "\nMatrix is an identity matrix";
             else
                 cout << "\nMatrix is NOT an identity matrix";
             break;
         case 7:
-            cout << "\nSum of diagonal is: " << sumOfDiagonal(mat, MAX_ROW);
+            cout << "\nSum of diagonal is: " << sumOfDiagonal(matrix, MAX_ROW);
             break;
         case 8: //Exit
             break;
@@ -77,9 +77,9 @@ int menu()
     cout << "2) Sum of Column" << endl;
     cout << "3) Fill Random" << endl;
     cout << "4) Print" << endl;
-    cout << "5) Average of Row" << endl;
-    cout << "6) Average of Column" << endl;
-    cout << "7) Find an Element" << endl;
+    cout << "5) Identity check" << endl;
+    cout << "6) Make an identity" << endl;
+    cout << "7) Diagonal sum" << endl;
     cout << "8) Exit" << endl;
     cout << "Enter your option: ";
     cin >> choice;
